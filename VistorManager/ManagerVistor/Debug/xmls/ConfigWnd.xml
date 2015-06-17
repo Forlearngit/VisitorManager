@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="430,330" maxinfo="430,330" roundcorner="6,6,8,8" >
+	<Font name="幼圆" size="13" default="true" />
+	<Font name="楷体"  size="18" />
+	<Font name="楷体"  size="15" />	
+	<VerticalLayout bkcolor="#FFe6e9ea" bkcolor2="#FFebedee">
+		<HorizontalLayout height="70" bkcolor="#FFc6e3f0" bkcolor2="#FFc9e3f0">
+			<HorizontalLayout />
+			<Button name="closebtn" tooltip="关闭" height="17" width="45" normalimage="file='Image/sys_dlg_close.png' source='90,0,135,17'" hotimage="file='Image/sys_dlg_close.png' source='45,0,90,17'" pushedimage="file='Image/sys_dlg_close.png' source='0,0,45,17'" />	
+		</HorizontalLayout>
+		<HorizontalLayout height="20" />
+		<HorizontalLayout height="21">
+			<Control width="30" />
+			<Label text="服务器设置" font="1" width="120" height="17" />
+		</HorizontalLayout>
+		<HorizontalLayout height="20" />
+		<HorizontalLayout height="21">
+			<Control width="90" />
+			<Label text="用户名：" width="64" height="19" />
+			<Edit name="UserName"  bordersize="1" bordercolor="#FF447AA1" width="160" height="19" />
+		</HorizontalLayout>
+		<HorizontalLayout height="10" />
+		<HorizontalLayout height="21">
+			<Control width="90" />
+			<Label text="密码：" width="64" height="19" />
+			<Edit name="ServicePassword"  bordersize="1" bordercolor="#FF447AA1" password="true" width="160" height="19" />
+		</HorizontalLayout>
+		<HorizontalLayout height="10" />
+		<HorizontalLayout height="21">
+			<Control width="90" />
+			<Label text="地址：" width="64" height="19" />
+			<Edit name="ServiceIP"  bordersize="1" bordercolor="#FF447AA1" width="160" height="19" />
+		</HorizontalLayout>
+		<HorizontalLayout height="10" />
+		<HorizontalLayout height="21">
+			<Control width="90" />
+			<Label text="端口号：" width="64" height="19" />
+			<Edit name="Port"  bordersize="1" bordercolor="#FF447AA1" width="160" height="19" />
+		</HorizontalLayout>
+		<HorizontalLayout height="30" />
+		<HorizontalLayout height="30">
+			<Control width="120" />
+			<Button name="btn_OK" float="true" text="确 定" align="center" bordersize="4" borderround="3,3" pos="200,7,0,0" width="100" height="24" normalimage="file='Image/button_nor.png'" hotimage="file='Image/button_hot.png'" pushedimage="file='Image/button_pushed.png'" />	
+			<Button name="btn_Cancel" float="true" text="取 消" align="center" bordersize="4" borderround="3,3" pos="315,7,0,0" width="100" height="24" normalimage="file='Image/button_nor.png'" hotimage="file='Image/button_hot.png'" pushedimage="file='Image/button_pushed.png'" />		
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

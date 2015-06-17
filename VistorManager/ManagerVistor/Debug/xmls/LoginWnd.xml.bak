@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="430,330" maxinfo="430,330" roundcorner="6,6,8,8" caption="0,0,0,180">
+	<Font name="幼圆" size="13" default="true" />
+	<Font name="楷体" bold="true" size="21" />
+	<Font name="楷体"  size="15" />
+	<VerticalLayout bkcolor="#FFe6e9ea" bkcolor2="#FFebedee">
+		<HorizontalLayout height="180" bkcolor="#FFc6e3f0" bkcolor2="#FFc9e3f0" bkimage="file='Image/bkimage.png'">
+			<VerticalLayout width="333"/>
+			<Button name="configbtn" tooltip="设置" maxheight="17" width="26" normalimage="file='Image/sys_dlg_menu.png' source='52,0,78,17'" hotimage="file='Image/sys_dlg_menu.png' source='26,0,52,17'" pushedimage="file='Image/sys_dlg_menu.png' source='0,0,26,17'"/>
+			<Button name="minbtn" tooltip="最小化" maxheight="17" width="26" normalimage="file='Image/sys_dlg_min.png' source='52,0,78,17'" hotimage="file='Image/sys_dlg_min.png' source='26,0,52,17'" pushedimage="file='Image/sys_dlg_min.png' source='0,0,26,17'"/>
+			<Button name="closebtn" tooltip="关闭" maxheight="17" width="45" normalimage="file='Image/sys_dlg_close.png' source='90,0,135,17'" hotimage="file='Image/sys_dlg_close.png' source='45,0,90,17'" pushedimage="file='Image/sys_dlg_close.png' source='0,0,45,17'" />
+		</HorizontalLayout>
+		<HorizontalLayout height="25" />
+		<HorizontalLayout >
+			<Label text="账号" float="true" pos="100,,0,0" width="36" height="19" />
+			<Edit name="account" float="true" pos="140,0,0,0"  bordersize="1" bordercolor="#FF447AA1" width="183" height="19" />
+			<Label text="密码" float="true" pos="100,25,0,0" width="36" height="17" />
+			<Edit name="password" float="true" pos="140,25,0,0" text="账号d 11321" bordersize="1" bordercolor="#FF447AA1" width="183" height="19" password="true"/>
+			<Option name="remember" float="true" pos="139,55,0,0" width="16" height="16" normalimage="file='Image/unchecked.png'" selectedimage="file='Image/checked.png'"/>
+			<Label text="记住密码" float="true" pos="157,55,0,0" width="63" height="16" />
+			<Option name="autolog" float="true" pos="252,55,0,0" width="16" height="16" normalimage="file='Image/unchecked.png'" selectedimage="file='Image/checked.png'"/>
+			<Label text="自动登陆" float="true" pos="270,55,0,0" width="63" height="16" />
+			<Button name="login" float="true" pos="140,84,0,0" width="183" height="30" text="登 陆" font="2" align="center" bordersize="3" borderround="3,3" normalimage="file='Image/logbtn_normal.png'" hotimage="file='Image/logbtn_hot.png'" pushedimage="file='Image/logbtn_push.png'"/>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

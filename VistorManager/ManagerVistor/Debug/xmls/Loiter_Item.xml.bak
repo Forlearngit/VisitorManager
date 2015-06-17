@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+	<ListContainerElement>
+		
+		<VerticalLayout width="70" sepwidth="1" >
+			<Option name="selectall" align="center" height="60" normalimage="file='Image/unchecked.png'" selectedimage="file='Image/checked.png'" float="true" pos="27,21,0,0" width="16" height="16" />
+		</VerticalLayout>
+		<VerticalLayout width="100">
+			<Button name="Photo"  pos="20,5,0,0" float="true" width="60" height="60" bkimage="file='Image\man_big.png' corner='1,1,1,1' "  />
+		</VerticalLayout>
+		<VerticalLayout width="80" >
+    			<Label name="Visitorname"  textcolor="#00000000" endellipsis="true"  font="2" align="center"  height="70" />
+		</VerticalLayout>
+		<VerticalLayout width="60">
+			<Label name="VisitorGender" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="100">
+			<Label name="VisitorCard" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="150">
+			<Label name="VisitorIdentity" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="150">
+			<Label name="VisitorAddr" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="100">
+			<Label name="VisitorCarLicence" font="2" align="center" height="70"/>	
+		</VerticalLayout>
+		<VerticalLayout width="120">
+			<Label name="VisitorMobile" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="100">
+			<Label name="VisitReason" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="70">
+			<Label name="VisitorQuantity" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="100">
+			<Label name="VisitTime" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="100">
+			<Label name="LeaveTime" font="2" align="center" height="70"/>
+		</VerticalLayout>
+		<VerticalLayout width="72">
+			<HorizontalLayout>
+				<Button name="LoiterDelete" text="删除" textcolor="#FF1562b1"	/>
+			</HorizontalLayout>
+		</VerticalLayout>
+	</ListContainerElement>
+</Window>	

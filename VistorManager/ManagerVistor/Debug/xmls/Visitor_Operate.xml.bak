@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="320,540" roundcorner="6,6,8,8">
+	<Include source="xmls/Default.xml" />
+	<VerticalLayout bordersize="1" bordercolor="#FFcce6f5" inset="0,0,0,3" bkimage="Image/tab_bkimage.jpg">
+		<HorizontalLayout height="25">
+			<Container width="22" height="22" bkimage="file='Icon\vistor_16.png' dest='5,4,21,20' " />
+			<Text text="智能访客系统v1.0" pos="22, 5, 200, 24" float="true" textcolor="#FF447AA1" font="0" />		
+			<HorizontalLayout />
+			<Button name="closebtn" tooltip="关闭" height="17" width="45" normalimage="file='Image/clsbtn_nor.png'" hotimage="file='Image/clsbtn_hot.png'" pushedimage="file='Image/clsbtn_push.png'"/>	
+		</HorizontalLayout>
+		<Control height="5" bkcolor="#FF97C0DA" bkcolor2="#FFbae2fc" />
+		<Control height="20" />	
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="姓   名:" width="64" />
+  		<Edit name="Visitor_Name_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*必填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="访客卡号:" width="64" />
+  		<Edit name="Visitor_Card_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="身份证号:" width="64" />
+  		<Edit name="Visitor_Identity_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*必填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="住   址:" width="64" />
+  		<Edit name="Visitor_Addr_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="车   牌:" width="64" />
+  		<Edit name="Visitor_CarLicence_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="联系电话:" width="64" />
+  		<Edit name="Visitor_Phone_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="来访原因:" width="64" />
+  		<Edit name="Visitor_Reason_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="来访人数:" width="64" />
+  		<Edit name="Visitor_Quantity_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="来访时间:" width="64" />
+  		<Edit name="Visitor_Vtime_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="离开时间:" width="64" />
+  		<Edit name="Visitor_Ltime_Edit" width="150" bordersize="1" bordercolor="#FFbebebe" />	
+ 			<Label text="   (*选填)" width="120" textcolor="#FF9d9e9f"/>	
+		</HorizontalLayout>
+		<Control height="20" />
+		<HorizontalLayout height="21">
+			<Control width="10" />
+			<Label text="性   别:" width="64" />
+  		<Combo name="Visitor_Gender_Combo" width="55" height="21" normalimage="file='Image\Combo_nor.bmp' corner='2,2,24,2'" hotimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" pushedimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" textpadding="2,2,2,2">
+  				<ListLabelElement text=" 男" selected="true" />
+  				<ListLabelElement text=" 女" />	
+  		</Combo>
+  		<Control width="20" />
+ 			<Label text="是否离开:" width="64" />	
+ 			<Combo name="Visitor_Isleft_Combo" width="55" height="21" normalimage="file='Image\Combo_nor.bmp' corner='2,2,24,2'" hotimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" pushedimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" textpadding="2,2,2,2">
+  				<ListLabelElement text=" 是" selected="true" />
+  				<ListLabelElement text=" 否" />	
+  		</Combo>
+  	</HorizontalLayout>
+  	<Control height="30" />
+  	<HorizontalLayout height="24" >
+  		<Control width="255" />
+  		<Button name="Visitor_Confirm_btn" width="75" height="24" text="确认" align="center" normalimage="file='Image/button_nor.bmp'" hotimage="file='Image/button_over.bmp'" pushedimage="file='Image/button_down.bmp'"/>
+  	</HorizontalLayout>
+	</VerticalLayout>
+</Window>

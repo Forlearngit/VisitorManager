@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,450">
+	<VerticalLayout>
+		<HorizontalLayout height="30" />
+		<HorizontalLayout>
+			<Control width="20" />
+			<HorizontalLayout height="21">
+  				<Label text="姓名:" width="32" />
+  				<Edit name="Staff_Name_Edit" width="100" bordersize="1" bordercolor="#FFbebebe" />	
+  				<Control width="20" />
+  				<Label text="性别:" width="32" />
+  				<Combo name="Staff_Gender_Combo" width="70" height="21" normalimage="file='Image\Combo_nor.bmp' corner='2,2,24,2'" hotimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" pushedimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" textpadding="2,2,2,2">
+  						<ListLabelElement text="男" selected="true" />
+  						<ListLabelElement text="女" />	
+  				</Combo>
+  		</HorizontalLayout>	
+  		<HorizontalLayout height="21">
+  			 <Control width="20" />
+  			 <Label text="卡号:" width="32" />
+  			 <Edit name="Staff_Card_Edit" width="100" bordersize="1" bordercolor="#FFbebebe" />	
+  			 <Control width="20" />		
+  			 <Label text="编号:" width="32" />
+  		   <Edit name="Staff_ID_Edit" width="100" bordersize="1" bordercolor="#FFbebebe" />	
+  		</HorizontalLayout>
+  		<HorizontalLayout height="21">
+  			 <Control width="20" />
+  			 <Label text="座机:" width="32" />
+  		 	 <Edit name="Staff_TelePhone_Edit" width="100" bordersize="1" bordercolor="#FFbebebe" />	
+  			 <Control width="20" />		
+  			 <Label text="手机:" width="32" />
+  			 <Edit name="Staff_MobilePhone_Edit" width="100" bordersize="1" bordercolor="#FFbebebe" />	
+  		</HorizontalLayout>
+  		<HorizontalLayout height="21">
+  			 <Control width="20" />	
+  			 <Label text="房间:" width="32" />
+  			 <Edit name="Staff_Room_Edit" width="100" bordersize="1" bordercolor="#FFbebebe" />	
+  			 <Control width="20" />		
+  		   <Label text="密码:" width="32" />
+  			 <Edit name="Staff_Password_Edit" width="100" bordersize="1" bordercolor="#FFbebebe" />
+  		</HorizontalLayout>
+		</HorizontalLayout>	
+	</VerticalLayout>	
+</Window>

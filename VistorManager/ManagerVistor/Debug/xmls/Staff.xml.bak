@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1024,898">
+	<Include source="xmls\Default.xml" />	
+	<VerticalLayout>
+				<HorizontalLayout height="20"/> <!-- 占位-->
+  			<HorizontalLayout height="30" > <!-- 搜索模块-->
+  				<Control width="30"/>
+  				<Edit name="Staff_SearchEdit" width="210" height="30" bordersize="1" font="5" bordercolor="#FF447AA1" tipvalue="请输入要查询的姓名.." />
+				  <Control width="20"/>
+				  <Combo name="Staff_SearchCombo" width="150" height="30" normalimage="file='Image\Combo_nor.bmp' corner='2,2,24,2'" hotimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" pushedimage="file='Image\Combo_over.bmp' corner='2,2,24,2'" textpadding="2,2,2,2" />
+				  <HorizontalLayout />
+				  <Button name="Staff_ImportBtn" text="导入"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>
+				  <Control width="30" />
+				  <Button name="Staff_ExportBtn" text="导出"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/> 
+  				<Control width="30"/>
+  			</HorizontalLayout>
+  			<HorizontalLayout height="20" />
+  			<HorizontalLayout height="34" >
+  				<VerticalLayout width="31" />
+  					<HorizontalLayout bkcolor="#FFf0f1f1">
+  						<Control width="5" />
+  						<VerticalLayout width="70" >
+  							<Control height="5" />
+  							<Button name="DeleteAll" text="删除选中项"  width="70" height="24" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>	
+  						</VerticalLayout>
+  						<Control width="20" />
+  						<VerticalLayout width="70" >
+  							<Control height="5" />
+  							<Button name="Staff_AddBtn" text="添加员工"  width="70" height="24" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>	
+  						</VerticalLayout>
+  					</HorizontalLayout>
+  				<VerticalLayout width="31" />
+  			</HorizontalLayout>
+  			<HorizontalLayout>
+  				<VerticalLayout width="30" />
+  				<List name="Staff_List" minwidth="1100" minheight="300" inset="1,0,1,1"  itembkcolor="#FFE9F5FF" itemselectedbkcolor="#FFa2d4fe" itemaltbk="true"  vscrollbar="true" hscrollbar="true" itemshowhtml="true" bordersize="2" bordercolor="0x00000000">
+						<ListHeader name="domain" bkimage="Image\list_header_bg.png" height="30">
+							<ListHeaderItem text="全选 " align="right" minwidth="70" maxwidth="70" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" /> 
+							<ListHeaderItem text="姓名" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="性别" width="80" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="卡号" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="员工编号" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="所在部门" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="座机号码" width="110" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="手机号码" width="110" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="房间号" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="地址" width="200" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+							<ListHeaderItem text="密码" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />	
+							<ListHeaderItem text="操作" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />	
+						</ListHeader>	
+					</List>	
+					<Option name="SelectAllItem" float="true" pos="40,9,0,0" width="16" height="16" normalimage="file='Image/unchecked.png'" selectedimage="file='Image/checked.png'" />
+					<VerticalLayout width="30" />
+  			</HorizontalLayout>
+  			<HorizontalLayout height="1"> <!-- 状态栏上边的黑线-->
+					<Control bkimage="Image\vertical_border.bmp" />
+			  </HorizontalLayout>
+  			<HorizontalLayout height="25" bkcolor="#FFD1E8F5"> <!-- 底部状态栏 -->
+  				<Control width="30" />
+  				<Label name="currentperson" width="300" text="" />
+  				<Label name="currentdepart" width="400" text=""/>
+  			</HorizontalLayout>
+	</VerticalLayout>
+</Window>

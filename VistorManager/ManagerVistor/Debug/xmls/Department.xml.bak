@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="800,600" caption="0,0,0,42" roundcorner="3,3">
+	<Include source="xmls\Default.xml" />
+	<VerticalLayout bkcolor="#FFc6e3f0" bordersize="2" bordercolor="FFc6e3f0" inset="1,1,1,1">
+		<HorizontalLayout height="32" bkcolor="#FFc6e3f0" bkcolor2="#FFc9e3f0">
+			<VerticalLayout width="755">
+				<Container width="22" height="22" bkimage="file='Icon\vistor_16.png' dest='5,4,21,20' " />
+				<Text text="智能访客系统v1.0" pos="22, 5, 200, 24" float="true" textcolor="#FF447AA1" font="0" />	
+				
+			</VerticalLayout>
+			<Button name="closebtn" tooltip="关闭" maxheight="17" maxwidth="45" normalimage="file='Image/sys_dlg_close.png' source='90,0,135,17'" hotimage="file='Image/sys_dlg_close.png' source='45,0,90,17'" pushedimage="file='Image/sys_dlg_close.png' source='0,0,45,17'" />
+		</HorizontalLayout>
+		<HorizontalLayout bkcolor="#FFFFFFFF">
+			<VerticalLayout  width="520">
+				<HorizontalLayout height="10"/>
+				<List name="DepartmentList" width="500" height="550" float="true" pos="10,10,0,0" bordersize="1" inset="1,0,1,1" bordercolor="#FFa0d8fc" borderround="3,3" vscrollbar="true" hscrollbar="true" itemhotbkcolor="#FF7cbbe3" itemselectedbkcolor="#FF7cbbe3">
+					<ListHeader name="domain" bkcolor="#FF9aafc5">
+						<ListHeaderItem text="部门编号" width="100" height="24" minwidth="6" align="center" sepwidth="1" sepimage="Image/list_header_sep.png"/>
+						<ListHeaderItem text="部门名称" width="100" height="24" minwidth="6" align="center" sepwidth="1" sepimage="Image/list_header_sep.png"/>
+						<ListHeaderItem text="隶属部门" width="100" height="24" minwidth="6" align="center" sepwidth="1" sepimage="Image/list_header_sep.png"/>
+						<ListHeaderItem text="部门电话" width="100" height="24" minwidth="6" align="center" sepwidth="1" sepimage="Image/list_header_sep.png"/>
+						<ListHeaderItem text="部门位置" width="100" height="24" minwidth="6" align="center" sepwidth="1" sepimage="Image/list_header_sep.png"/>	
+					</ListHeader>
+				</List>
+			</VerticalLayout>
+			<Control width="1" bkcolor="#FFc3e0fe"/>
+			<Control width="30"/>
+			<VerticalLayout >
+				<HorizontalLayout height="50"/>
+				<HorizontalLayout height="40">
+					<Label text="部门名称：" width="64" height="19" />
+					<Edit name="DepartmentName" bordersize="1" bordercolor="#FF447AA1" height="19" width="142"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="40">
+					<Label text="部门编号：" width="64" height="19" />
+					<Edit name="DepartmentNumber" bordersize="1" bordercolor="#FF447AA1" height="19" width="142"/>
+				</HorizontalLayout>
+				<HorizontalLayout height="40">
+					<Label text="部门电话：" width="64" height="19" />
+					<Edit name="DepartmentPhone" bordersize="1" bordercolor="#FF447AA1" height="19" width="142"/>	
+				</HorizontalLayout>
+				<HorizontalLayout height="40">
+					<Label text="部门位置：" width="64" height="19" />
+					<Edit name="DepartmentLocation" bordersize="1" bordercolor="#FF447AA1" height="19" width="142"/>	
+				</HorizontalLayout>
+				<HorizontalLayout height="40">
+					<Label text="隶属部门：" width="64" height="19" />
+					<Combo name="DepatmentCombo" width="142" height="21" normalimage="Image/Combo_nor.bmp" hotimage="Image/Combo_over.bmp">
+					<ListLabelElement text="无" selected="true"/>	
+					</Combo>
+					<Edit name="DepartmentParent" width="121" height="19" float="true" mouse="false" pos="64,1,0,0" />
+				</HorizontalLayout>
+				<HorizontalLayout height="40">
+					<Control width="25"/>
+					<Button name="DepartmentAdd" width="75" height="24" text="添加" align="center" normalimage="file='Image/button_nor.bmp'" hotimage="file='Image/button_over.bmp'" pushedimage="file='Image/button_down.bmp'"/>
+					<Control width="20"/>
+					<Button name="DepartmentDelete" width="75" height="24" text="删除" align="center" normalimage="file='Image/button_nor.bmp'" hotimage="file='Image/button_over.bmp'" pushedimage="file='Image/button_down.bmp'"/>		
+				</HorizontalLayout>
+				<HorizontalLayout height="70"/>
+				<Control bkimage="Image/panda.png" width="150" height="150"/>
+			</VerticalLayout>
+		</HorizontalLayout>	
+	</VerticalLayout>	
+</Window>

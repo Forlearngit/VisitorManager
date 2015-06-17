@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1024,898">
+    	<Font name="宋体" size="12" default="true" />
+    	<Include source="xmls\Default.xml" />
+		<VerticalLayout>
+				<HorizontalLayout height="25" bkcolor="#FFB8DFF2">
+					<Control width="3" />
+					<Option height="25" width="100" text="来访人员" name="Visitor" textcolor="#FF386382" font="2" normalimage="Image\tabbar_normal.png" hotimage="Image\tabbar_hover.png" pushedimage="Image\tabbar_pushed.png" selectedimage="Image\tabbar_pushed.png" group="datamanagetab" selected="true"/>
+				 	<Control width="3" />
+				 	<Option height="25" width="100" text="滞留人员" name="Stay" textcolor="#FF386382" font="2" normalimage="Image\tabbar_normal.png" hotimage="Image\tabbar_hover.png" pushedimage="Image\tabbar_pushed.png" selectedimage="Image\tabbar_pushed.png" group="datamanagetab"/>
+				 	<Control width="3" />
+				 	<Option height="25" width="100" text="黑名单" name="Black" textcolor="#FF386382" font="2" normalimage="Image\tabbar_normal.png" hotimage="Image\tabbar_hover.png" pushedimage="Image\tabbar_pushed.png" selectedimage="Image\tabbar_pushed.png" group="datamanagetab" />
+				 	<Control width="3" />
+				 	<Option height="25" width="100" text="门禁卡管理" name="doorcard" textcolor="#FF386382" font="2" normalimage="Image\tabbar_normal.png" hotimage="Image\tabbar_hover.png" pushedimage="Image\tabbar_pushed.png" selectedimage="Image\tabbar_pushed.png" group="datamanagetab" />
+				 	<Control width="3" />
+				 	<Option height="25" width="100" text="门卫管理" name="Doorkeeper" textcolor="#FF386382" font="2" normalimage="Image\tabbar_normal.png" hotimage="Image\tabbar_hover.png" pushedimage="Image\tabbar_pushed.png" selectedimage="Image\tabbar_pushed.png" group="datamanagetab" />
+				 	<!--hotimage="Image\tabbar_hover.png" pushedimage="Image\tabbar_pushed.png" selectedimage="Image\tabbar_pushed.png" group="datatab" selected="true"/>/-->
+				</HorizontalLayout>
+				
+				<TabLayout name="tabDataManage">	
+					<VerticalLayout> <!-- Item1 -->
+						<HorizontalLayout height="30"/> <!-- 占位-->
+						<HorizontalLayout height="30">   <!-- 搜索模块-->
+							<Control width="30"/>
+  					  <Edit name="Visitor_SearchEdit" width="270" height="30" bordersize="1" bordercolor="#FF447AA1" focusbordercolor="#FF447AA1" textpadding="2,2,2,2" tipvalue="请输入要查询的姓名.." />
+							<HorizontalLayout />
+				 		  <Button name="Visitor_ImportBtn" text="导入"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>
+				 		  <Control width="30" />
+				 		  <Button name="Visitor_ExportBtn" text="导出"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/> 
+  						<Control width="30"/>
+						</HorizontalLayout>
+						<HorizontalLayout height="20" /> <!-- 占位-->
+						<HorizontalLayout >
+							<Control width="30" />
+							<List name="Visitors" miniwidth="1100"  itembkcolor="#FFE9F5FF"  itemaltbk="true"  vscrollbar="true" hscrollbar="true" itemshowhtml="true" bordersize="2" bordercolor="0x00000000" >
+								<ListHeader name="domain" bkimage="Image\list_header_bg.png" height="30">
+										<ListHeaderItem text="全选 " align="right" minwidth="70" maxwidth="70" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />											
+										<ListHeaderItem text="照片" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="姓名" width="80"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+										<ListHeaderItem text="性别"  width="60" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="访客卡号" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="身份证号" width="110" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="住址" width="110" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="车牌号" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="联系电话" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="来访原因" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="来访人数" width="70" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="来访时间" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="离开时间" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="是否离开" width="72" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />									
+										<ListHeaderItem text="操作" width="80" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+								</ListHeader>
+							</List>
+							<Control width="30" />
+							<Option name="Visitor_SelectAll" float="true" pos="40,9,0,0" width="16" height="16" normalimage="file='Image/unchecked.png'" selectedimage="file='Image/checked.png'" />
+						</HorizontalLayout>
+						<HorizontalLayout height="20" > <!-- 翻页项 -->
+								<VerticalLayout />
+								<Button name="Visitor_LastPage" width="20" height="20" enabled="false" normalimage="file='Image/last.png' source='0,0,20,20'" hotimage="file='Image/last.png' source='20,0,40,20'" pushedimage="file='Image/last.png' source='40,0,60,20'" disabledimage="file='Image/last.png' source='60,0,80,20'"/>
+								<Control width="5"/>
+								<Edit name="Visitor_PageEdit" text="1" font="1" align="center" mouse="false" width="30" />
+								<Control width="5"/>
+								<Button name="Visitor_NextPage" width="20" height="20" normalimage="file='Image/next.png' source='0,0,20,20'" hotimage="file='Image/next.png' source='20,0,40,20'" pushedimage="file='Image/next.png' source='40,0,60,20'" disabledimage="file='Image/next.png' source='60,0,80,20'"/>
+								<VerticalLayout >
+									<HorizontalLayout>
+										<Control width="20" />
+										<Label text="转到"  width="30" />
+										<Edit name="Visitor_TurnPage" font="1" align="center" width="30" bordersize="1" bordercolor="#FF929393" />
+										<Label text=" 页" width="24" />		
+										<Button name="Visitor_TurnBtn" text="确定" width="50" height="20" normalimage="file='Image/Button_Non.png'"	hotimage="file='Image/Staff_Hot.png'"	/>
+									</HorizontalLayout>
+								</VerticalLayout>
+						</HorizontalLayout>
+						<HorizontalLayout height="10" />
+						<HorizontalLayout height="1"><!--上下黑边/-->
+							<Container bkimage="Image\vertical_border.bmp" />
+						</HorizontalLayout>
+						<HorizontalLayout height="25" bkcolor="#FFD1E8F5" >
+							<!--状态栏/-->
+							<Control width="30" />
+  						<Label name="Visitor_CurrentPage" width="300" text="" />
+  						<Label name="Visitor_CurrentVisitor" width="400" text=""/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<VerticalLayout> <!-- item2 -->
+						<HorizontalLayout height="30"/> <!-- 占位-->
+						<HorizontalLayout height="30">   <!-- 搜索模块-->
+							<Control width="30"/>
+  					  <Edit name="Loiter_SearchEdit" width="270" height="30" bordersize="1" bordercolor="#FF447AA1" focusbordercolor="#FF447AA1" textpadding="2,2,2,2" tipvalue="请输入要查询的姓名.." />
+							<HorizontalLayout />
+				 		  <Button name="Loiter_ImportBtn" text="导入"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>
+				 		  <Control width="30" />
+				 		  <Button name="Loiter_ExportBtn" text="导出"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/> 
+  						<Control width="30"/>
+						</HorizontalLayout>
+						<HorizontalLayout height="20" /> <!-- 占位-->
+						<HorizontalLayout >
+							<Control width="30" />
+							<List name="Loiters" miniwidth="1100"  itembkcolor="#FFE9F5FF"  itemaltbk="true"  vscrollbar="true" hscrollbar="true" itemshowhtml="true" bordersize="2" bordercolor="0x00000000" >
+								<ListHeader name="domain" bkimage="Image\list_header_bg.png" height="30">
+										<ListHeaderItem text="全选 " align="right" minwidth="70" maxwidth="70" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />											
+										<ListHeaderItem text="照片" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="姓名" width="80"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+										<ListHeaderItem text="性别"  width="60" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="访客卡号" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="身份证号" width="150" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="住址" width="150" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="车牌号" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="联系电话" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="来访原因" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="来访人数" width="70" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="来访时间" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="离开时间" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="操作" width="72" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />									
+								</ListHeader>
+							</List>
+							<Control width="30" />
+							<Option name="Loiter_SelectAll" float="true" pos="40,9,0,0" width="16" height="16" normalimage="file='Image/unchecked.png'" selectedimage="file='Image/checked.png'" />
+						</HorizontalLayout>
+						<HorizontalLayout height="20" > <!-- 翻页项 -->
+								<VerticalLayout />
+								<Button name="Loiter_LastPage" width="20" height="20" enabled="false" normalimage="file='Image/last.png' source='0,0,20,20'" hotimage="file='Image/last.png' source='20,0,40,20'" pushedimage="file='Image/last.png' source='40,0,60,20'" disabledimage="file='Image/last.png' source='60,0,80,20'"/>
+								<Control width="5"/>
+								<Edit name="Loiter_PageEdit" text="1" font="1" align="center" mouse="false" width="30" />
+								<Control width="5"/>
+								<Button name="Loiter_NextPage" width="20" height="20" normalimage="file='Image/next.png' source='0,0,20,20'" hotimage="file='Image/next.png' source='20,0,40,20'" pushedimage="file='Image/next.png' source='40,0,60,20'" disabledimage="file='Image/next.png' source='60,0,80,20'"/>
+								<VerticalLayout >
+									<HorizontalLayout>
+										<Control width="20" />
+										<Label text="转到"  width="30" />
+										<Edit name="Loiter_TurnPage" font="1" align="center" width="30" bordersize="1" bordercolor="#FF929393" />
+										<Label text=" 页" width="24" />		
+										<Button name="Loiter_TurnBtn" text="确定" width="50" height="20" normalimage="file='Image/Button_Non.png'"	hotimage="file='Image/Staff_Hot.png'"	/>
+									</HorizontalLayout>
+								</VerticalLayout>
+						</HorizontalLayout>
+						<HorizontalLayout height="10" />
+						<HorizontalLayout height="1"><!--上下黑边/-->
+							<Container bkimage="Image\vertical_border.bmp" />
+						</HorizontalLayout>
+						<HorizontalLayout height="25" bkcolor="#FFD1E8F5" >
+							<!--状态栏/-->
+							<Control width="30" />
+  						<Label name="Loiter_CurrentPage" width="300" text="" />
+  						<Label name="Loiter_CurrentVisitor" width="400" text=""/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<VerticalLayout><!-- item3 -->
+						<HorizontalLayout height="30"/> <!-- 占位-->
+						<HorizontalLayout height="30">   <!-- 搜索模块-->
+							<Control width="30"/>
+  					  <Edit name="Black_SearchEdit" width="270" height="30" bordersize="1" bordercolor="#FF447AA1" focusbordercolor="#FF447AA1" textpadding="2,2,2,2" tipvalue="请输入要查询的姓名.." />
+							<HorizontalLayout />
+				 		  <Button name="Black_ImportBtn" text="导入"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>
+				 		  <Control width="30" />
+				 		  <Button name="Black_ExportBtn" text="导出"  width="80" height="30" textcolor="#00000000" font="5"  normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/> 
+  						<Control width="30"/>
+						</HorizontalLayout>
+						<HorizontalLayout height="20" /> <!-- 占位-->
+						<HorizontalLayout >
+							<Control width="30" />
+							<List name="BlackList" minwidth="1100"  itembkcolor="#FFE9F5FF"  itemaltbk="true"  vscrollbar="true" hscrollbar="true" itemshowhtml="true" bordersize="2" bordercolor="0x00000000" >
+								<ListHeader name="domain" bkimage="Image\list_header_bg.png" height="30">
+										<ListHeaderItem text="全选 " align="right" minwidth="70" maxwidth="70" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />											
+										<ListHeaderItem text="照片" width="100" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+										<ListHeaderItem text="姓名" width="120"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+										<ListHeaderItem text="性别" width="100"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+										<ListHeaderItem text="身份证" width="300"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+										<ListHeaderItem text="居住地址" width="300"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+										<ListHeaderItem text="手机号码" width="262"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+										<ListHeaderItem text="操作" width="120" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />									
+								</ListHeader>
+							</List>
+							<Control width="30" />
+							<Option name="Black_SelectAll" float="true" pos="40,9,0,0" width="16" height="16" normalimage="file='Image/unchecked.png'" selectedimage="file='Image/checked.png'" />
+						</HorizontalLayout>
+						<HorizontalLayout height="20" > <!-- 翻页项 -->
+								<VerticalLayout />
+								<Button name="Black_LastPage" width="20" height="20" enabled="false" normalimage="file='Image/last.png' source='0,0,20,20'" hotimage="file='Image/last.png' source='20,0,40,20'" pushedimage="file='Image/last.png' source='40,0,60,20'" disabledimage="file='Image/last.png' source='60,0,80,20'"/>
+								<Control width="5"/>
+								<Edit name="Black_PageEdit" text="1" font="1" align="center" mouse="false" width="30" />
+								<Control width="5"/>
+								<Button name="Black_NextPage" width="20" height="20" normalimage="file='Image/next.png' source='0,0,20,20'" hotimage="file='Image/next.png' source='20,0,40,20'" pushedimage="file='Image/next.png' source='40,0,60,20'" disabledimage="file='Image/next.png' source='60,0,80,20'"/>
+								<VerticalLayout >
+									<HorizontalLayout>
+										<Control width="20" />
+										<Label text="转到"  width="30" />
+										<Edit name="Black_TurnPage" font="1" align="center" width="30" bordersize="1" bordercolor="#FF929393" />
+										<Label text=" 页" width="24" />		
+										<Button name="Black_TurnBtn" text="确定" width="50" height="20" normalimage="file='Image/Button_Non.png'"	hotimage="file='Image/Staff_Hot.png'"	/>
+									</HorizontalLayout>
+								</VerticalLayout>
+						</HorizontalLayout>
+						<HorizontalLayout height="10" />
+						<HorizontalLayout height="1"><!--上下黑边/-->
+							<Container bkimage="Image\vertical_border.bmp" />
+						</HorizontalLayout>
+						<HorizontalLayout height="25" bkcolor="#FFD1E8F5" >
+							<!--状态栏/-->
+							<Control width="30" />
+  						<Label name="Black_CurrentPage" width="300" text="" />
+  						<Label name="Black_CurrentPerson" width="400" text=""/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<VerticalLayout><!-- item4 -->
+						<HorizontalLayout>
+							<VerticalLayout>
+								<HorizontalLayout height="30"/> <!-- 占位-->
+								<HorizontalLayout height="30">   <!-- 搜索模块-->
+							  	<Control width="30"/>
+						   	  <Edit name="Card_SearchEdit" width="270" height="30" bordersize="1" bordercolor="#FF447AA1" focusbordercolor="#FF447AA1" textpadding="2,2,2,2" tipvalue="请输入要查询的卡号.." />  				
+								</HorizontalLayout>
+								<HorizontalLayout height="20" />
+								<HorizontalLayout>
+									<Control width="30" />
+									<List name="CardList" minwidth="900"  itembkcolor="#FFE9F5FF"  itemaltbk="true"  vscrollbar="true" hscrollbar="true" itemshowhtml="true" bordersize="2" bordercolor="0x00000000" >
+										<ListHeader name="domain" bkimage="Image\list_header_bg.png" height="30">
+											<ListHeaderItem text="序号" align="center" width="80" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />											
+											<ListHeaderItem text="卡号" width="250" font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png" />
+											<ListHeaderItem text="卡类型" width="180"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+											<ListHeaderItem text="起始日期" width="250"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+											<ListHeaderItem text="有效日期" width="250"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>
+											<ListHeaderItem text="卡状态" width="120"  font="2" sepwidth="1" hotimage="Image/list_header_hot.png" pushedimage="Image/list_header_pushed.png" sepimage="Image/list_header_sep.png"/>								
+										</ListHeader>
+									</List>
+								</HorizontalLayout>
+								<HorizontalLayout height="20" > <!-- 翻页项 -->
+									<VerticalLayout />
+									<Button name="Card_LastPage" width="20" height="20" enabled="false" normalimage="file='Image/last.png' source='0,0,20,20'" hotimage="file='Image/last.png' source='20,0,40,20'" pushedimage="file='Image/last.png' source='40,0,60,20'" disabledimage="file='Image/last.png' source='60,0,80,20'"/>
+									<Control width="5"/>
+									<Edit name="Card_PageEdit" text="1" font="1" align="center" mouse="false" width="30" />
+									<Control width="5"/>
+									<Button name="Card_NextPage" width="20" height="20" normalimage="file='Image/next.png' source='0,0,20,20'" hotimage="file='Image/next.png' source='20,0,40,20'" pushedimage="file='Image/next.png' source='40,0,60,20'" disabledimage="file='Image/next.png' source='60,0,80,20'"/>
+									<VerticalLayout >
+										<HorizontalLayout>
+											<Control width="20" />
+											<Label text="转到"  width="30" />
+											<Edit name="Card_TurnPage" font="1" align="center" width="30" bordersize="1" bordercolor="#FF929393" />
+											<Label text=" 页" width="24" />		
+											<Button name="Card_TurnBtn" text="确定" width="50" height="20" normalimage="file='Image/Button_Non.png'"	hotimage="file='Image/Staff_Hot.png'"	/>
+										</HorizontalLayout>
+									</VerticalLayout>
+								</HorizontalLayout>
+								<HorizontalLayout height="10" />
+							</VerticalLayout>	
+							<Control width="1" bkcolor="#FFD1E8F5" />
+							<VerticalLayout width="270">
+								<Control height="50" />
+								<HorizontalLayout height="21">
+										<Control width="15" />
+										<Label font="2" textcolor="#FF447AA1" text="卡  号:" width="72" />
+										<Edit name="CardNo_Staff" width="150" bordersize="1" bordercolor="FF447AA1" tipvalue="卡号.."/>
+								</HorizontalLayout>
+								<Control height="20" />
+								<HorizontalLayout height="21">
+										<Control width="15" />
+										<Label font="2" textcolor="#FF447AA1" text="卡类型:" width="72" />
+										<Combo name="CardType_Staff" width="142" height="21" normalimage="file='Image/Combo_nor.bmp'" hotimage="file='Image/Combo_over.bmp'" >
+												<ListLabelElement text=" 员工卡" selected="true"/>
+												<ListLabelElement text=" 访客卡" />	
+									  </Combo>	
+								</HorizontalLayout>
+								<Control height="20" />
+								<HorizontalLayout height="21">
+										<Control width="15" />	
+										<Label font="2" textcolor="#FF447AA1" text="起始日期:" width="72" />	
+										<DateTime name="StartDate_Staff"  width="100" font="2" bordercolor="#FF447AA1" bordersize="1" textpadding="2,2,2,2" timestyle="expand" />
+								</HorizontalLayout>
+								<Control height="20" />
+								<HorizontalLayout height="21">
+										<Control width="15" />
+										<Label font="2" textcolor="#FF447AA1" text="有效日期:" width="72" />	
+										<DateTime name="EndDate_Staff"  width="100" font="2" bordercolor="#FF447AA1" bordersize="1" textpadding="2,2,2,2" timestyle="expand" />
+								</HorizontalLayout>
+								<Control height="20" />
+								<HorizontalLayout height="21">
+										<Control width="15" />
+										<Label font="2" textcolor="#FF447AA1" text="卡状态:" width="72" />
+										<Combo name="CardStatus_Staff" width="142" height="21" normalimage="file='Image/Combo_nor.bmp'" hotimage="file='Image/Combo_over.bmp'" >
+												<ListLabelElement text=" 正常状态" selected="true"/>
+												<ListLabelElement text=" 锁定状态" />	
+										</Combo>
+								</HorizontalLayout>
+								<HorizontalLayout height="21">
+									<Control width="50" />
+									<Button name="AddCard_btn" text="添加" width="70" normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>
+									<Control width="30" />
+									<Button name="DeleteCard_btn" text="删除" width="70" normalimage="Image\button_nor.bmp" hotimage="Image\button_over.bmp" pushedimage="Image\button_down.bmp"/>
+								</HorizontalLayout>
+							</VerticalLayout> 
+						</HorizontalLayout>
+						<HorizontalLayout height="1"><!--上下黑边/-->
+							<Container bkimage="Image\vertical_border.bmp" />
+						</HorizontalLayout>
+						<HorizontalLayout height="25" bkcolor="#FFD1E8F5" >
+							<!--状态栏/-->
+							<Control width="30" />
+  						<Label name="Card_CurrentPage" width="300" text="" />
+  						<Label name="Card_CurrentPerson" width="400" text=""/>
+						</HorizontalLayout>
+					</VerticalLayout>
+					
+				</TabLayout>
+		</VerticalLayout>
+</Window>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="120,82" roundcorner="10,10" >
+ 	<VerticalLayout bkimage="file='Image/menu_bk.png'" bordersize="2" >
+ 		<Button name="setbtn" text="设置" hotbkcolor="#FFe6e6e6" align="center" float="true" pos="1,1,0,0" height="20" width="118"/>
+ 		<Button name="checkbtn" text="切换账号" hotbkcolor="#FFe6e6e6" align="center" float="true" pos="1,21,0,0" height="20" width="118"/>
+ 		<Button name="DepartmentBtn" text="部门设置" hotbkcolor="#FFe6e6e6" align="center" float="true" pos="1,41,0,0" height="20" width="118"/>
+ 		<Button name="non" text="其他" hotbkcolor="#FFe6e6e6" align="center" float="true" pos="1,61,0,0" height="20" width="118"/>
+ 	</VerticalLayout>
+</Window>
